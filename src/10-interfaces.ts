@@ -1,6 +1,6 @@
 type Sizes = 'S' | 'M' | 'L' | 'XL';
 
-interface Product {
+interface Productv2 {
 	id: number | string;
 	title: string;
 	price: number;
@@ -8,8 +8,8 @@ interface Product {
 	size?: Sizes;
 }
 
-const products: Product[] = [];
-const data: Product = {
+const Productv2s: Productv2[] = [];
+const data: Productv2 = {
   id: '1',
   title: 'Camisa de verano',
   price: 99.90,
@@ -17,8 +17,8 @@ const data: Product = {
   size: 'XL'
 };
 
-const funAgregarProduct = (data : Product) =>{
-  products.push(data);
+const funAgregarProductv2 = (data : Productv2) =>{
+  Productv2s.push(data);
 };
-funAgregarProduct(data);
-console.log('products',products);
+funAgregarProductv2(data);
+console.log('Productv2s',Productv2s);
