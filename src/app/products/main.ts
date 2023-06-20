@@ -1,6 +1,6 @@
-import { funAgregarProduct, products } from './product.service'
+import { funAgregarProduct, products, funModificarProduct } from './product.service'
 import { Product } from './product.model'
-import { CreateProductDto } from './product.dto'
+import { CreateProductDto, UpdateProductDto } from './product.dto'
 //libreria - faker autogenerado
 import { faker } from '@faker-js/faker';
 
@@ -46,3 +46,14 @@ for (let index = 0; index < 3; index++) {
 }
 console.log(products);
 
+//update
+const dataUpdate: UpdateProductDto = {
+  title: 'New title :)',
+  price: 99.90,
+  stock: 1000,
+};
+//obtener id
+const row: Product  = products[0];
+console.log('Original',products[0]);
+funModificarProduct(dataUpdate, row.id);
+console.log('Modificado',products[0]);

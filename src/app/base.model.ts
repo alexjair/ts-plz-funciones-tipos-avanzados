@@ -1,5 +1,5 @@
 export interface BaseAtribute {
-	readonly id: number | string;
+	readonly id: string;
   readonly register: Date;
   update: Date;
 }
